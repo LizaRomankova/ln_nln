@@ -1,0 +1,33 @@
+public abstract class Car {
+
+   private String model;
+   private String color;
+   private int maxSpeed;
+
+   public void gas() {
+       System.out.println("Газуем!");
+   }
+
+   public abstract void brake();
+
+   //геттеры и сеттеры
+}
+
+
+public class Sedan extends Car {
+
+   @Override
+   public void brake() {
+       System.out.println("Седан тормозит!");
+   }
+
+}
+
+public class Main {
+
+   public static void main(String[] args) {
+
+       Sedan sedan = new Sedan();
+       sedan.gas();
+   }
+}
